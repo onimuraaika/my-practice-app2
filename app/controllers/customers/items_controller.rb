@@ -5,7 +5,7 @@ class Customers::ItemsController < ApplicationController
   
   # 商品登録
   def new
-    @item = Item.new(item_params)
+    # @item = Item.new#(item_params)
   end
   
   # 商品詳細
@@ -19,7 +19,7 @@ class Customers::ItemsController < ApplicationController
   end
   
   private
-  def item_params
-    params.require(:item).permit(:name, :image, :introduction, :price, :for_someone, :age, :gender, :purpose)
-  end
+  # def item_params
+  #   params.require(:item).permit(:name, :image, :introduction, :price, :for_someone, :age, :gender, :purpose)
+  # end
 end
