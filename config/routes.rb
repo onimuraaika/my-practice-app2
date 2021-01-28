@@ -19,5 +19,7 @@ Rails.application.routes.draw do
   scope module: :customers do
     root 'items#top'
     get 'customers/mypage' => 'customers#show', as: 'mypage'
+    
+    resources :items, only: [:create, :show, :edit, :update, :destroy]
   end
 end
