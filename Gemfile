@@ -66,3 +66,6 @@ gem 'devise'
 # 画像投稿・加工
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
+# 日本語化
+gem 'rails-i18n'
+gem 'enum_help'
