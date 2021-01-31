@@ -6,12 +6,16 @@
   <h4>商品画像</h4>
  
   <h4>値段</h4>
-  <h4>商品説明</h4>
+  <h4>商品紹介文</h4>
   <%= f.text_area :introduction %>
-  <h4>目的</h4>
+  <h4>シチュエーションは？</h4>
   <%= f.select :purpose, Item.purposes.keys.map {|k| [I18n.t("enums.item.purpose.#{k}"), k]} %>
-  <h4>誰に向けたプレゼント</h4>
-  <h4>年齢層</h4>
-  <h4>性別</h4>
+  <h4>誰に向けたプレゼント？</h4>
+  <%= f.select :for_someone, Item.for_someones.keys.map {|k| [I18n.t("enums.item.for_someone.#{k}"), k]} %>
+  <h4>プレゼントする相手の性別は？</h4>
+  <%= f.select :gender, Item.genders.keys.map {|k| [I18n.t("enums.item.gender.#{k}"), k]} %>
+  <h4>プレゼントする相手の年齢は？</h4>
+  <%= f.select :age, Item.ages.keys.map {|k| [I18n.t("enums.item.age.#{k}"), k]} %>
+  <h4><!--投稿ボタン--></h4>
   <%= f.submit '投稿' %>
 <% end %>
