@@ -1,11 +1,11 @@
 class Customers::ItemsController < ApplicationController
-  # 商品一覧
-  def top
-  end
-  
   # 商品登録
   def new
-    # @item = Item.new#(item_params)
+    @item = Item.new#(item_params)
+  end
+  
+  # 商品一覧
+  def top
   end
   
   # 商品詳細
